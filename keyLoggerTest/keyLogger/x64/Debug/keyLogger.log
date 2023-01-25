@@ -1,3 +1,2 @@
 ﻿  main.cpp
-K:\Programming\keyLogger\keyLogger\keyLogger\main.cpp(10,10): warning C4101: 'ch': unreferenced local variable
-  keyLogger.vcxproj -> K:\Programming\keyLogger\keyLogger\x64\Debug\keyLogger.exe
+  keyLogger.vcxproj -> E:\Programming\keyLogger\keyLoggerTest\x64\Debug\keyLogger.exe
