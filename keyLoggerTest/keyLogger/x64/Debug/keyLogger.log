@@ -1,3 +1,5 @@
-﻿  main.cpp
-E:\Programming\keyLogger\keyLoggerTest\keyLogger\main.cpp(187,9): warning C4101: 'msg': unreferenced local variable
-  keyLogger.vcxproj -> E:\Programming\keyLogger\keyLoggerTest\x64\Debug\keyLogger.exe
+﻿  keyLogger.cpp
+  keyProcessor.cpp
+  main.cpp
+  Generating Code...
+  keyLogger.vcxproj -> K:\Programming\keyLogger\keyLogger\keyLoggerTest\x64\Debug\keyLogger.exe
