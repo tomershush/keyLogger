@@ -131,11 +131,13 @@
     <ClCompile Include="keyProcessor.cpp" />
     <ClCompile Include="logManager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="windowManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="keyLogger.h" />
     <ClInclude Include="keyProcessor.h" />
     <ClInclude Include="logManager.h" />
+    <ClInclude Include="windowManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

