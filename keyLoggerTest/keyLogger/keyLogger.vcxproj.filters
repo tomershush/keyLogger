@@ -24,12 +24,24 @@
     <ClCompile Include="keyProcessor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="logManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="windowManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="keyLogger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="keyProcessor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="logManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="windowManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
