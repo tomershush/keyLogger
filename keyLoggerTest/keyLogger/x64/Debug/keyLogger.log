@@ -1,2 +1,5 @@
-﻿  windowManager.cpp
-  keyLogger.vcxproj -> K:\Programming\keyLogger\keyLogger\keyLoggerTest\x64\Debug\keyLogger.exe
+﻿  keyLogger.cpp
+  keyStroke.cpp
+  main.cpp
+  Generating Code...
+  keyLogger.vcxproj -> E:\Programming\keyLogger\keyLoggerTest\x64\Debug\keyLogger.exe

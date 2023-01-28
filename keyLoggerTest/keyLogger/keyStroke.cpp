@@ -30,5 +30,19 @@ bool keyStroke::isShifted() const
 
 char keyStroke::getKeyCharacter() const
 {
-	return _asciiChar;
+	char keyChar = _asciiChar;
+
+	if (_shifted)
+		keyChar = keyProcessor::formatShiftedKeys(keyChar);
+
+
+	return keyChar;
+}
+
+keyStroke keyStroke::operator=(keyStroke const& other)
+{
+	_printable = other.isPrintable();
+	_shifted = other.isShifted();
+	_asciiChar = other.getKeyCharacter();
+	return *this;
 }

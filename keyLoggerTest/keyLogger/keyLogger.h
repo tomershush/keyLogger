@@ -13,6 +13,6 @@
 class keyLogger
 {
 public:
-	static char checkPressedKey();
+	static keyStroke checkPressedKey();
 };
 

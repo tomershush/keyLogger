@@ -1,4 +1,7 @@
 #pragma once
+#include "keyProcessor.h"
+
+
 class keyStroke
 {
 public:
@@ -9,6 +12,8 @@ public:
 	bool isPrintable() const;
 	bool isShifted() const;
 	char getKeyCharacter() const;
+
+	keyStroke operator = (keyStroke const& other);
 
 private:
 	bool _printable;
