@@ -15,7 +15,7 @@ class logManager
 public:
 	static logManager* getLogManager();
 	void createLogFile();
-	void writeCharToLog(const char charToLog);
+	void writeCharToLog(const std::string charToLog);
 
 	logManager(const logManager& obj)= delete;
 	~logManager();

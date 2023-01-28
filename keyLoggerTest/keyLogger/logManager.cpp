@@ -25,12 +25,13 @@ void logManager::createLogFile()
 /*
 * A function that writes a single character to the log file.
 */
-void logManager::writeCharToLog(const char charToLog)
+void logManager::writeCharToLog(const std::string charToLog)
 {
     std::ofstream logFile(LOG_FILE, std::ios_base::app);
 
-    if(charToLog != 0)
-        logFile << charToLog;
+    logFile << charToLog;
+
+    logFile.close();
 }
 
 // Destructor.

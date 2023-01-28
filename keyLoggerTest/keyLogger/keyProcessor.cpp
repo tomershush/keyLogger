@@ -106,3 +106,28 @@ char keyProcessor::convertToLowerCase(char letter)
 {
     return letter + 32;
 }
+
+std::string keyProcessor::convertSpecialChar(int virtualCode)
+{
+    std::string keyName = "";
+
+    switch (virtualCode)
+    {
+        case VK_SHIFT:
+            keyName = "Shift";
+            break;
+
+        case VK_RETURN:
+            keyName = "Enter";
+            break;
+
+        case VK_MENU:
+            keyName = "Alt";
+            break;
+
+        default:
+            break;
+    }
+    
+    return keyName;
+}

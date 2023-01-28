@@ -1,10 +1,12 @@
 #pragma once
+#include <iostream>
+#include <Windows.h>
 
 #define LOWEST_PRINTABLE '!'
 #define HIGHEST_PRINTABLE '~'
 
 /*
-* A library that processes and formats 
+* A static class that processes and formats 
 * keystrokes to readable or useful formats.
 */
 
@@ -14,5 +16,6 @@ public:
 	static char filterPrintableChar(char keyChar);
 	static char formatShiftedKeys(char keyChar);
 	static char convertToLowerCase(char letter);
+	static std::string convertSpecialChar(int virtualCode);
 };
 
