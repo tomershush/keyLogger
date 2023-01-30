@@ -5,6 +5,8 @@
 #define LOWEST_PRINTABLE '!'
 #define HIGHEST_PRINTABLE '~'
 
+#define ASCII_TO_LOWER 32
+
 /*
 * A static class that processes and formats 
 * keystrokes to readable or useful formats.

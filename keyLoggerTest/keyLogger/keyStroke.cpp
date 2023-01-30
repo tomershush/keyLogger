@@ -64,6 +64,7 @@ keyStroke keyStroke::operator=(keyStroke const& other)
 	_printable = other.isPrintable();
 	_shifted = other.isShifted();
 	_asciiChar = other.getKeyCharacter();
+	_keyCode = other.getKeyCode();
 	return *this;
 }
 

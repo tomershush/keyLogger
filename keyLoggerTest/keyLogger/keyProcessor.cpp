@@ -104,28 +104,42 @@ char keyProcessor::formatShiftedKeys(char keyChar)
 */
 char keyProcessor::convertToLowerCase(char letter)
 {
-    return letter + 32;
+    return letter + ASCII_TO_LOWER;
 }
 
+/*
+* A function that processes a virtual key code into a string name. (If possible)\
+* Input: Virtual key code.
+* Output: String representing the key's name.
+*/
 std::string keyProcessor::convertSpecialChar(int virtualCode)
 {
-    std::string keyName = "";
+    std::string keyName = "\n*";
 
     switch (virtualCode)
     {
         case VK_SHIFT:
-            keyName = "Shift";
+            keyName += "Shift\n";
             break;
 
         case VK_RETURN:
-            keyName = "Enter";
+            keyName += "Enter\n";
             break;
 
         case VK_MENU:
-            keyName = "Alt";
+            keyName += "Alt\n";
+            break;
+
+        case VK_TAB:
+            keyName += "Tab\n";
+            break;
+
+        case VK_CAPITAL:
+            keyName += "Caps\n";
             break;
 
         default:
+            keyName = "";
             break;
     }
     
