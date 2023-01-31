@@ -7,7 +7,7 @@
 */
 char keyProcessor::filterPrintableChar(char keyChar)
 {
-    if (keyChar >= LOWEST_PRINTABLE && keyChar <= HIGHEST_PRINTABLE)
+    if (keyChar >= LOWEST_PRINTABLE && keyChar <= HIGHEST_PRINTABLE || keyChar == ' ')
         return keyChar;
 
     return 0;
@@ -136,6 +136,14 @@ std::string keyProcessor::convertSpecialChar(int virtualCode)
 
         case VK_CAPITAL:
             keyName += "Caps\n";
+            break;
+
+        case VK_LBUTTON:
+            keyName += "Left Mouse\n";
+            break;
+
+        case VK_RBUTTON:
+            keyName += "Right Mouse\n";
             break;
 
         default:
