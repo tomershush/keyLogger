@@ -132,6 +132,7 @@
     <ClCompile Include="keyStroke.cpp" />
     <ClCompile Include="logManager.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="registryHandler.cpp" />
     <ClCompile Include="windowManager.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +140,7 @@
     <ClInclude Include="keyProcessor.h" />
     <ClInclude Include="keyStroke.h" />
     <ClInclude Include="logManager.h" />
+    <ClInclude Include="registryHandler.h" />
     <ClInclude Include="windowManager.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

